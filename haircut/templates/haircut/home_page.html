@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazing Percy's Barbershop</title>
+</head>
+<body>
+    <h1>Amazing Percy's Barbershop</h1>
+    <p>Percy thinks himself is so handsome that he wants to change his hair makes him looks nice</p>
+
+
+    <!-- Time 1 -->
+    <p>Percy: Loves babies</p>
+    <img src="https://i0.wp.com/simplesojourns.com/wp-content/uploads/2017/06/Knotts-Ghost-Town-Alive-Simple-Sojourns-13.jpg?resize=3009%2C2149">
+
+
+    <!-- Time 2 -->
+    <p>Percy: is handsome</p> 
+    <img src="https://tse3.mm.bing.net/th?id=OIP.XhsPc5RhAbE7ueFCOTokaQHaE8&pid=Api">
+
+
+    <!-- Time 3 -->
+    <p>Percy: Change his hair</p>
+    <img src="http://www.oldtownbarberclub.com/wp-content/uploads/2015/01/slide01.jpg">
+
+    <!--User Form-->
+    <h1>Place Your Order</h1>
+    <form action="{% url'haircut:home_page' % " method="POST">
+    	{% csrf_token %}
+    	<input type="text" name="time"placeholder="Type Your time"><br>
+    	<textarea placeholder="text Your customer_name" name="customer_name"></textarea><br>
+    	<input type="submit" value="Buy now!">
+    </form>
+    <h1>Your Order</h1>
+    <p>time:{{time}}</p>
+    <p>customer_name:{{customer_name}}</p>
+
+    
+</body>
+</html>
